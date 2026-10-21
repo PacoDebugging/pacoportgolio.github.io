@@ -33,8 +33,8 @@
     <section class="projects-grid">
         <a class="project-card-link" href="#" data-project="project1" aria-label="Open details for Project 1">
             <article class="project-card">
-                <h2>Project 1</h2>
-                <p class="project-description">project 1</p>
+                <h2>Rock Gobblers</h2>
+                <p class="project-description">a top down pixel art shooter with a focus on mining materials</p>
                 <ul class="project-tech">
                     <li>C#</li>
                     <li>Unity</li>
@@ -86,6 +86,62 @@
                 <ul id="modal-tech" class="project-tech"></ul>
             </div>
         </div>
+        <div class="project-code-content" data-project-code="project1">
+            <section class="modal-code" aria-labelledby="modal-code-title">
+                <h3 id="modal-code-title">Random map generation</h3>
+                <div class="modal-code-content">
+                    <div class="modal-code-images">
+                        <img class="mapvisualizer-image" src="mapvisualizer-screenshot.png" alt="Map visualizer project screenshot">
+                        <button class="code-image-button" type="button" aria-label="Enlarge both code snippet images">
+                            <img src="codesnipmap.1.png" data-snippet-group="tilemap" alt="Code snippet showing tilemap visualization logic">
+                        </button>
+                        <button class="code-image-button" type="button" aria-label="Enlarge both code snippet images">
+                            <img src="codesniomap.2.png" data-snippet-group="tilemap" alt="Code snippet showing tilemap corner logic">
+                        </button>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
+            <section class="modal-code" aria-labelledby="movement-code-title">
+                <h3 id="movement-code-title">Movement code</h3>
+                <div class="modal-code-content movement-code-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. These movement snippets show the player controls and animation blend trees.</p>
+                    <div class="modal-code-images movement-code-images">
+                        <div class="movement-code-sources">
+                            <button class="code-image-button movement-code-sprites" type="button" aria-label="Enlarge all movement code snippet images">
+                                <img src="sprites toghether.png" data-snippet-group="movement" alt="Player movement sprites shown together">
+                            </button>
+                            <button class="code-image-button movement-code-main" type="button" aria-label="Enlarge all movement code snippet images">
+                                <img src="movementcode.png" data-snippet-group="movement" alt="Movement code snippet showing player controls">
+                            </button>
+                        </div>
+                        <div class="movement-code-blends">
+                            <button class="code-image-button" type="button" aria-label="Enlarge all movement code snippet images">
+                                <img src="movement.1.png" data-snippet-group="movement" alt="Movement animation blend tree">
+                            </button>
+                            <button class="code-image-button" type="button" aria-label="Enlarge all movement code snippet images">
+                                <img src="movement.2.png" data-snippet-group="movement" alt="Idle animation blend tree">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="modal-code project-code-placeholder" data-project-code="project2">
+            <h3>Project 2 code snippets</h3>
+            <pre><code>Code snippets coming soon.</code></pre>
+        </section>
+        <section class="modal-code project-code-placeholder" data-project-code="project3">
+            <h3>Project 3 code snippets</h3>
+            <pre><code>Code snippets coming soon.</code></pre>
+        </section>
+    </div>
+</div>
+
+<div id="code-image-modal" class="code-image-modal hidden" aria-hidden="true">
+    <div class="code-image-modal-content" role="dialog" aria-modal="true" aria-label="Enlarged code snippets">
+        <button class="code-image-modal-close" type="button" aria-label="Close enlarged code snippets">×</button>
+        <div class="code-image-pair"></div>
     </div>
 </div>
 
@@ -95,8 +151,8 @@
 <script>
     const projectData = {
         project1: {
-            title: 'Project 1',
-            description: 'A small Unity prototype focused on core gameplay systems, level flow, and polished player feedback.',
+            title: 'Rock Gobblers',
+            description: 'its a top down pixel art shooter with athe goal of collecting the designated amount of matierials to progress the game, its made in Unity with C#.',
             tech: ['C#', 'Unity'],
             image: 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEhIPEhAQEBAPDw8PDxAPEA8QDw8PFREWFhURFRUYHSggGBolHRUVITEhJSkrLi4vFx8zODMtNygtLisBCgoKDg0OGhAQGysdHR0tLS0tLS0tLS0rLSstLS0rLS0tKy0tLS0tLS0rKy8tKystLS0tKy0tKystLS8tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EADsQAAICAQEGAwYEBAQHAAAAAAECAAMRBAUSITFBUQYTYRQicYGRoQcyQrFSwdHwFTNi8RYjQ2NyguH/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAoEQACAgIBBAEDBQEAAAAAAAAAAQIRAxIhEzFBUQQiYXEUgZGh8EL/2gAMAwEAAhEDEQA/APNeXCoghkrhlSeG5nuIXCCEWkQ4SEWv0mbmUkLrTCrTGFrh0qmcshQotEuKZopp/SFXTekzeQRl+VJ8ua40ksNFDZgY3lTvKm17DJGiP9iGzFZiiqWFU3KtnOxwqsx54VSTj5QrbKsUZNdigcyUYAfONbdxNowPJPad7OZ6BdlWE4COSBkgK2cHriXbZFgGTW4A5kqwAjqXoWyPOezmd7PPQNs5hjKkZGRnIyO4nHZzDmMcAeIxwPIyW2VaMD2eT7PPQjZTHACsSRkAKckdx6SLNlWKMmt1HdlYD6mL6vQbI8/7PO9nm7ZoGXgylTjOCCDjvxlX0LDgVIPPBGDE2x2Yns/pI9nm42hYYypG8MjIIyO47yh0npBNsLRi+zyDRN59mWBQ5rcIeTFSFPz5QJ0sTm13GuTGNEg0TYOllTpYuoMxzTKmma500odPH1QoyfIkeRNU6eVOnj6wUZnkSppmoaJRqDGswUZppEodNH2pgXrmiyEtGfZp4HypoPSYI0zaMyGBR4dDF6xGa1EJDQZDDIJStYzWk55MtItWsZrWdVXG6qpzSmVR1S+kZRR2hKaY9Vpx2kpsToURF9YdUWMjTjpCLp/SWpMl0KbnpLeX8I6unH9kS4oXt95WzJtCVTMnFWKnGMrkHHymhtixy27vtumuslcnBO6DnE4VDsPvLeX6CarK1BxvuZtJyTojabMthKsyk11glSRw3R2jOsra281l28v3Cwyd0KFBJ/vvF9z0+0o5YEAdcdO7Kv8APPymqzuUmvbuv54/sz0pL7KhzWIb6ms3cCtiazgcauRHyxmTqVR/LqfCnyqzXZ/Cd38rehmcLjjqMoXHD7TvMPE8PdGT3x5e9w+wmjyyl/zd9/uTol57djXWrcsQHIKaUqd3mMZ5GK0VG6wLvWtUuHItOScdMZxz/eJPYw4nP+WHHDoSBj05y4zxGeIx9/nCWSXFx4vtf+9Aor3yNbSQ3KXYYsqYqw4f5bHK/TlK7U2c7NvhCV3E48MYCDMTZz7x4+6ccufPng8OXrJbOcZ/WycjjgOf3kzcpXtF815Xi16Kitap9vsMavZz2LSVQsBQi5GOeT/WZLUf0jaZO6Acbw4ZBAzhDgd/zj5wqVAr88zLJ7qrXv8ABcX4u+RrU1WCqzLNczqFsII8mpRjgB1b4f74BomqaR3MoaB6zDPN5GvFfezTGlFGWaJU0TVNS9jBtWO056ZrsZhog2omm1Yldwdoh2Zfs046YTTKCCZJVCszvIEGahNJk9IvYImgELK/SK2ViPWmJW5lwZLE7VirCMXCKMJ2QIYqimM1LOqEbqE0nIaJqWOUpIqqjdVc45yNEEprjtVcpSkepSYMompIygnIsKixCbJXMIonKsKFlKzJshRCKB2kgS2JorMmyyhZfKweIenSs3oJvj2k6irM5NLlsoGk+QW/T9po06RR0yYfE9HH8KT5m6/BzyzrwZi7N9AJf/C16/tNAypM6V8bGjP [truncated]'
         },
@@ -120,6 +176,10 @@
     const modalTech = document.getElementById('modal-tech');
     const modalImage = document.getElementById('modal-image');
     const closeButton = document.querySelector('.modal-close');
+    const codeImageModal = document.getElementById('code-image-modal');
+    const codeImageCloseButton = document.querySelector('.code-image-modal-close');
+    const codeImagePair = document.querySelector('.code-image-pair');
+    let codeImageOpener = null;
 
     function openModal(projectKey) {
         const project = projectData[projectKey];
@@ -129,6 +189,10 @@
         modalDescription.textContent = project.description;
         modalImage.src = projectKey === 'project1' ? 'main-picture.png' : project.image;
         modalImage.alt = project.title;
+        modalImage.classList.toggle('project1-preview', projectKey === 'project1');
+        document.querySelectorAll('[data-project-code]').forEach(section => {
+            section.classList.toggle('project-code-hidden', section.dataset.projectCode !== projectKey);
+        });
         modalTech.innerHTML = '';
         project.tech.forEach(item => {
             const li = document.createElement('li');
@@ -141,8 +205,36 @@
     }
 
     function closeModal() {
+        closeCodeImageModal();
         modal.classList.add('hidden');
         modal.setAttribute('aria-hidden', 'true');
+    }
+
+    function openCodeImageModal(opener) {
+        const snippetGroup = opener.querySelector('img').dataset.snippetGroup;
+        const snippetImages = document.querySelectorAll(
+            `.code-image-button img[data-snippet-group="${snippetGroup}"]`
+        );
+        codeImagePair.replaceChildren();
+        snippetImages.forEach(image => {
+            const enlargedImage = document.createElement('img');
+            enlargedImage.src = image.src;
+            enlargedImage.alt = `Enlarged ${image.alt.toLowerCase()}`;
+            codeImagePair.appendChild(enlargedImage);
+        });
+        codeImagePair.classList.toggle('three-images', snippetImages.length === 3);
+        codeImageOpener = opener;
+        codeImageModal.classList.remove('hidden');
+        codeImageModal.setAttribute('aria-hidden', 'false');
+        codeImageCloseButton.focus();
+    }
+
+    function closeCodeImageModal() {
+        if (codeImageModal.classList.contains('hidden')) return;
+        codeImageModal.classList.add('hidden');
+        codeImageModal.setAttribute('aria-hidden', 'true');
+        if (codeImageOpener) codeImageOpener.focus();
+        codeImageOpener = null;
     }
 
     document.querySelectorAll('.project-card-link').forEach(link => {
@@ -156,10 +248,21 @@
     if (projectData[projectKeyFromUrl]) openModal(projectKeyFromUrl);
 
     closeButton.addEventListener('click', closeModal);
+    document.querySelectorAll('.code-image-button').forEach(button => {
+        button.addEventListener('click', () => openCodeImageModal(button));
+    });
+    codeImageCloseButton.addEventListener('click', closeCodeImageModal);
+    codeImageModal.addEventListener('click', (event) => {
+        if (event.target === codeImageModal) closeCodeImageModal();
+    });
     modal.addEventListener('click', (event) => {
         if (event.target === modal) closeModal();
     });
     window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !codeImageModal.classList.contains('hidden')) {
+            closeCodeImageModal();
+            return;
+        }
         if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
             closeModal();
         }

@@ -134,6 +134,7 @@ position: absolute;
 width: 250px;
 top: 250px;
 transition: 1s top ease;
+color: #95B4CC;
 }
 
 .card:hover .Hover-Effect{
