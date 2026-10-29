@@ -23,7 +23,10 @@
             </li>
         </ul>
     </nav>
-    <button class="language-toggle" id="language-toggle" type="button" aria-pressed="false">Translate</button>
+    <div class="language-switcher" aria-label="Language selector">
+        <button class="language-toggle is-active" id="language-toggle-en" type="button" data-language="en" aria-pressed="true">ENG</button>
+        <button class="language-toggle" id="language-toggle-nl" type="button" data-language="nl" aria-pressed="false">NL</button>
+    </div>
 </header>
 <main class="projects-page">
     <section class="projects-hero">
@@ -96,20 +99,20 @@
                             <img src="codesnipmap.1.png" data-snippet-group="tilemap" alt="Code snippet showing tilemap visualization logic">
                         </button>
                         <button class="code-image-button" type="button" aria-label="Enlarge both code snippet images">
-                            <img src="codesniomap.2.png" data-snippet-group="tilemap" alt="Code snippet showing tilemap corner logic">
+                            <img src="codesnipmap.2.png" data-snippet-group="tilemap" alt="Code snippet showing tilemap corner logic">
                         </button>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p> this is the code for the procedial map generation in the game. It shows how the tilemap is created and how the corners are handled.</p>
                 </div>
             </section>
             <section class="modal-code" aria-labelledby="movement-code-title">
                 <h3 id="movement-code-title">Movement code</h3>
                 <div class="modal-code-content movement-code-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. These movement snippets show the player controls and animation blend trees.</p>
+                    <p>These movement snippets show the player controls and animation blend trees.</p>
                     <div class="modal-code-images movement-code-images">
                         <div class="movement-code-sources">
                             <button class="code-image-button movement-code-sprites" type="button" aria-label="Enlarge all movement code snippet images">
-                                <img src="sprites toghether.png" data-snippet-group="movement" alt="Player movement sprites shown together">
+                                <img src="sprites together.png" data-snippet-group="movement" alt="Player movement sprites shown together">
                             </button>
                             <button class="code-image-button movement-code-main" type="button" aria-label="Enlarge all movement code snippet images">
                                 <img src="movementcode.png" data-snippet-group="movement" alt="Movement code snippet showing player controls">

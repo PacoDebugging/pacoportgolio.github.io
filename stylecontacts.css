@@ -92,23 +92,46 @@ nav{
     display: block;
 }
 
+.language-switcher{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
 .language-toggle{
     flex-shrink: 0;
-    padding: 10px 16px;
+    padding: 8px 14px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    background: transparent;
+    color: #DDF0FF;
+    font: inherit;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.language-toggle.is-active{
     background: #517A99;
     color: #fff;
-    font: inherit;
-    cursor: pointer;
-    transition: 0.3s transform ease, 0.3s background ease;
 }
 
 .language-toggle:hover,
 .language-toggle:focus-visible{
-    transform: scale(1.05);
-    background: #DDF0FF;
-    color: #072033;
+    transform: translateY(-1px);
+    background: rgba(221, 240, 255, 0.12);
+    color: #fff;
+}
+
+.language-toggle.is-active:hover,
+.language-toggle.is-active:focus-visible{
+    background: #517A99;
+    color: #fff;
 }
 
 .contact-page{

@@ -21,7 +21,10 @@
             </li>
         </ul>
     </nav>
-    <button class="language-toggle" id="language-toggle" type="button" aria-pressed="false">Translate</button>
+    <div class="language-switcher" aria-label="Language selector">
+        <button class="language-toggle is-active" id="language-toggle-en" type="button" data-language="en" aria-pressed="true">ENG</button>
+        <button class="language-toggle" id="language-toggle-nl" type="button" data-language="nl" aria-pressed="false">NL</button>
+    </div>
 </header>
     <main class="cards-container">
         <h1 class="projectstext">Latest Projects</h1>
@@ -34,21 +37,48 @@
             </ul>
              <div class="Hover-Effect">
                 <h2>Rock gobblers</h2>
-                <P>This is my solo project from year 3. where ive worked on a top down pixel art shooter game, i made all the codes myself (with help) and all the sprites myself too. </P>
+                <P>This is my solo project from year 3. where ive worked on a top down pixel art shooter game, i made all the code and all the sprites myself </P>
             </div>
         </div>
         </section>
         <section class="about-section">
-                        <div class="about-text">
+            <div class="about-text">
                 <h2>About Me</h2>
-                <p>Hi I'm Paco van der Aar. im 18 years old, enjoy playing video games, drawing and walking alot.
-                   I am quite introverted but i still love talking alot with people. i am learning game development i work with C# and Unity.
-                   ive worked on several small projects and mostly focused on UI in unity and now im focusing more on gameplay, i would love to learn more coding languages so i have more knowledge on more than one aspect.
-                   i had a part time job as a waiter and have learned to work efficiently under pressure and comunicate not only with my co-workers in a positive way but also being able to communicate with customers so they are pleased with the service.
-                   im not the best at drawing but i am still learning and trying my best to makew the drawings how i imagine them to be, i draw mostly on paper but im learning to draw online too and in diffrent styles, such as ixel art, anime and realistic.
-                   i game alot with friends and meet new people throught gaming, i usually play Overwatch, Rainbow six siege, Content warning and Dragon ball legends.
+                <p>
+                    Hi, I’m Paco van der Aar. I’m 18 years old and I love gaming, drawing, and long walks.
+                    I’m a bit introverted, but I still enjoy meeting people and talking with others.
+                    I’m learning game development with C# and Unity, and I’ve worked on several small projects,
+                    mostly focused on UI design before shifting my attention toward gameplay. I’d love to grow my
+                    skills by learning more coding languages and improving my overall knowledge across different areas.
                 </p>
+                <p>
+                    I previously worked as a waiter, which taught me how to stay calm under pressure, work efficiently,
+                    and communicate with customers and coworkers in a positive way. I’m still improving my drawing skills,
+                    and I enjoy experimenting with different styles like pixel art, anime, and more realistic work.
+                    I also spend a lot of time gaming with friends.
+                </p>
+
+                <div class="about-panels">
+                    <div class="about-panel">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>Unity</li>
+                            <li>C#</li>
+                            <li>UI Design</li>
+                            <li>Gameplay</li>
+                        </ul>
+                    </div>
+                    <div class="about-panel">
+                        <h3>Interests</h3>
+                        <ul>
+                            <li>Gaming</li>
+                            <li>Drawing</li>
+                            <li>Walking</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
             <div class="about-img">
                 <img src="me-portofolio.jpg" alt="Paco van der Aar">
             </div>
